@@ -18,7 +18,7 @@ const create = async (req: Request, res: Response): Promise<Response> => {
 
 const read = async (req: Request, res: Response): Promise<Response> => {
     const queryCategory: string = `
-    SELECT * FROM "movies"       -- Correção: "SELECT" estava escrito como "SLECT"
+    SELECT * FROM "movies"       
     WHERE category = $1;
     `;
     const queryResultCategory: QueryResult = await client.query(queryCategory, [req.query.category]);
