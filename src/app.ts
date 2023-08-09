@@ -19,5 +19,5 @@ app.delete("/movies/:id", logic.destroy)
 const PORT: number = 3000
 app.listen(PORT, async (): Promise<void> => {
     await startDatabase()
-    console.log(`Server running on port ${PORT}`)
+    console.log(`Servidor Online ${PORT}`)
 })
